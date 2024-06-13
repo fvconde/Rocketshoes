@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import DashboardView from '../views/DashboardView.vuerdView.vue'
+import DashboardView from '../views/DashboardView.vue'
 
 Vue.use(VueRouter)
 
