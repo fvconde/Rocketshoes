@@ -1,7 +1,19 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
+  <div class="header">
+    
+    <!-- <h1>{{ msg }}</h1> -->
+    <div class="logo">
+      <img src="../assets/logo.svg" alt="logo">
+    </div>
+    <div class="cart">
+      <div class="numberOfItens">
+        <p style="color: white; margin: 0px"><b>Meu carrinho</b></p>
+        <p style="color: #757477; margin: 0px">0 itens</p>
+      </div>
+      
+      <i class="fa-solid fa-cart-shopping fa-2x icon-white"></i>
+    </div>
+    <!-- <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
@@ -26,13 +38,13 @@
       <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+    </ul> -->
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Header',
   props: {
     msg: String
   }
@@ -54,5 +66,30 @@ li {
 }
 a {
   color: #42b983;
+  
+}
+
+.icon-white {
+  color: white;
+}
+
+.header {
+  padding-top: 15px;
+  width: 1140px;
+  max-width: 1140px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart {
+  display: flex;
+}
+
+.numberOfItens {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 10px;
 }
 </style>

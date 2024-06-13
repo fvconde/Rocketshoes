@@ -1,10 +1,11 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
     <router-view/>
+    <!-- <nav>
+      <router-link to="/dashboard">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </nav> -->
+    
   </div>
 </template>
 
@@ -16,7 +17,13 @@
   text-align: center;
   color: #333;
   background-color: #333;
-  max-width: 1140px;
+  background-image: url("assets/background.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center
 }
 
 nav {
