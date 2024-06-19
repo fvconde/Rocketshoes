@@ -1,19 +1,19 @@
 <template>
   <div class="dashboard">
-    <Header msg="Welcome to Your Vue.js App"/>
-    <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
-    
+    <Header/>
+    <ProductGrid/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Header from '@/components/Header.vue'
+import Header from '@/components/Header.vue';
+import ProductGrid from '@/components/product-grid.vue'
 
 export default {
   name: 'DashboardView',
   components: {
-    Header
+    Header, ProductGrid
   }
 }
 </script>
