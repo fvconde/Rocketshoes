@@ -1,6 +1,22 @@
 <template>
     <div class="product-grid">
-        <div class="card">
+        <div v-for="product in this.products" :key="product.id" class="card">
+            <div class="product">
+                <img :src='product.image' alt="">
+                <strong>{{ product.title }}</strong>
+                <span>R$ {{ product.price}}0</span>
+                
+                    <button>
+                        <div class="div_carrinho_button">
+                            <i class="fa-solid fa-cart-shopping fa-1x icon-white"></i>
+                            <p>1</p>
+                        </div>
+                        <span>ADICIONAR AO CARRINHO</span>                        
+                    </button>
+                
+            </div>
+        </div>
+        <!-- <div class="card">
             <div class="product">
                 <img src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis1.jpg" alt="">
                 <strong>Tênis de Caminhada Leve Confortável</strong>
@@ -47,8 +63,8 @@
                     </button>
                 
             </div>
-        </div>
-        <div class="card">
+        </div> -->
+        <!-- <div class="card">
             <div class="product">
                 <img src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis1.jpg" alt="">
                 <strong>Tênis de Caminhada Leve Confortável</strong>
@@ -63,33 +79,24 @@
                     </button>
                 
             </div>
-        </div>
-        <div class="card">
-            <div class="product">
-                <img src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis1.jpg" alt="">
-                <strong>Tênis de Caminhada Leve Confortável</strong>
-                <span>R$ 179,90</span>
-                
-                    <button>
-                        <div class="div_carrinho_button">
-                            <i class="fa-solid fa-cart-shopping fa-1x icon-white"></i>
-                            <p>1</p>
-                        </div>
-                        <span>ADICIONAR AO CARRINHO</span>                        
-                    </button>
-                
-            </div>
-        </div>
+        </div> -->
     </div>
 </template>
 
 <script>
+import { dataMixin, methodsProducts } from '../plugins/mixin'
 
 export default {
+    mixins: [dataMixin, methodsProducts],
+
     name: 'product-grid',
     props: {
 
-    }
+    },
+
+    mounted() {
+     this.fetchProduct();
+  },
 }
 </script>
 
