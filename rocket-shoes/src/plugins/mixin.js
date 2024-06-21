@@ -4,6 +4,7 @@ export const dataMixin = {
     data() {
         return {
             products: [],
+            cart: []
         }
     }
 }
@@ -19,6 +20,23 @@ export const methodsProducts = {
                 console.log(this.products)
 
             })
+        },
+
+        addProductToCart(id) {
+            alert("Adicionado: " + id)
+            this.cart.push(id)
+            let productInCart = 0
+            for(let i = 0; i < this.cart.length; i++) {
+                if(this.cart[i] == id) {
+                    productInCart++
+                }
+            }
+            let idElemento = id;
+            let elemento = document.getElementById(idElemento);
+            elemento.innerHTML = `${productInCart}`
+            console.log(this.cart)
         }
+
+
     }
 }
